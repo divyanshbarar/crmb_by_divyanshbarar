@@ -1,0 +1,20 @@
+{% extends 'main.htm' %}
+{% load static%}
+
+{% block content %}
+<br>
+<div class="row-center px-5 my-5">
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h4>Are you sure that you want to delete the {{item}} ?</h4>
+
+            <form action="{% url 'delete_order' item.id %}" method="POST">
+                {% csrf_token %}
+                <a class="btn btn-sm btn-warning"href="{% url 'home' %}">CANCEL</a>
+
+                <button class="btn btn-sm btn-danger" type="sumbit">CONFIRM</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

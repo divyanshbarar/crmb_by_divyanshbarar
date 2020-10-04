@@ -1,0 +1,23 @@
+{% extends 'main.htm' %}
+{% load static%}
+
+{% block content %}
+
+<br>
+<div class="row-center px-5 my-5">
+    <div class="col-md-6">
+        <div class="card card-body">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ formset.management_form }}
+                {% for form in formset%}
+                 {{form}}
+                 <hr>
+                {% endfor %}
+                <button class="btn btn-sm btn-info" type="sumbit">sumbit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

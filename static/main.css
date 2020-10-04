@@ -1,0 +1,12 @@
+body{
+    background-color:lightpink;
+  }
+  #total-orders{
+    background-color:royalblue;
+  }
+  #orders-delivered{
+    background-color:cornflowerblue;
+  }
+  #orders-pending{
+    background-color:darkslateblue;
+  }
