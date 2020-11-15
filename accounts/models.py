@@ -30,6 +30,8 @@ class Products(models.Model):
     description=models.CharField(max_length=250,null=True)
     date=models.DateTimeField(auto_now_add=True,null=True)
     tags=models.ManyToManyField(Tags)
+    def __str__(self):
+       return self.name
 
 
 
