@@ -31,8 +31,7 @@ class Products(models.Model):
     date=models.DateTimeField(auto_now_add=True,null=True)
     tags=models.ManyToManyField(Tags)
 
-    def __str__(self):
-       return self.name
+
 
 
 class Order(models.Model):
