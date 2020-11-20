@@ -1,6 +1,10 @@
 from django.urls import path
 from . import views
 
+admin.site.site_header="Customer Relationship MAnagement"
+admin.site.site_title=" Welcome Divyansh"
+admin.site.index_title="Backend Of CRM"
+
 urlpatterns = [
 
     path('register/',views.registerPage,name='register'),
